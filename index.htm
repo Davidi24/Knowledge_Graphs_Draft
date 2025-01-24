@@ -105,7 +105,7 @@
             For example, in the knowledge graph of an e-commerce platform, “Electronics” is the parent category, and
             “Smartphones” is its
             child category. Hierarchical data structure through the use of categories simplifies the data retrieval
-            operation and could not be a better way for users to browse very large data sets. Taxonomies are very
+            operation and is an excellent way for users to browse large data sets. Taxonomies are very
             suitable for various tasks such as segmentation and filtering, as they provide a solid framework for
             understanding the relationships between entities. Having a clear and intuitive way to present data helps
             users find what they need, and thus, taxonomies excel in applications such as product recommendations or
@@ -201,7 +201,7 @@
             data points and allow AI systems to interpret information in a more meaningful way. For example, knowledge
             graphs in recommendation systems improve personalization by matching user preferences with relevant content.
             They also enable contextual understanding essential for natural language processing. One example is teaching
-            chatbots the difference between naming a city and a state with a single term, namely “New York.”
+            chatbots the difference between naming a city and a state with a single term, such as “New York.”
         </p>
 
         <p>
@@ -317,54 +317,42 @@
         <h2>5. Demo</h2>
         <h4>5.1 Description</h4>
         <p>
-            The demo provides a detailed walkthrough of how to construct a knowledge graph using Neo4j and highlights
-            its applications in real-world scenarios. It includes two examples: one utilizing simplified mock data to
-            explain the core principles of knowledge graphs and another that leverages a complex dataset of movie
-            credits to illustrate Neo4j's advanced capabilities. The mock data example focuses on demonstrating how
-            entities can be effectively connected within a graph, while the second example dives deeper, using actual
-            movie credits to explore intricate relationships among actors, crew members, and movies. These examples
-            collectively underline the versatility of Neo4j in handling diverse datasets and scenarios.
-        </p>
+            The demo demonstrates how to build a knowledge graph using Neo4j and apply it to real-world scenarios in
+            practical ways. It provides two examples: one with simple mock data that illustrates core functionality and
+            another using a complex movie credits dataset to showcase Neo4j’s advanced capabilities. The mock data
+            example highlights how entities connect and interact within a knowledge graph, while the second example
+            deeply explores intricate relationships among actors, crew members, and movies.
         <h4>5.2 Ontology and Taxonomy Creation</h4>
         <p>
-            In both examples, ontology creation defines the graph’s structural foundation with classes like Person,
-            Actor, Crew, and Movie. The first example utilizes a straightforward relationship structure, such as Actor
-            IS_A Person, to make the connections easy to understand. The more complex movie dataset, however, introduces
-            an extended taxonomy, categorizing departments like Production and Directing, while linking crew members to
-            their respective departments. This hierarchical framework enables logical reasoning, enriches the graph with
-            contextual meaning, and provides deeper insights into the data.
+            In both examples, the ontology defines the graph's structure with classes like Person, Actor, Crew, and
+            Movie. The first example uses simple relationships, such as Actor IS_A Person, to demonstrate basic
+            connections. The more complex movie dataset introduces additional taxonomy, categorizing departments such as
+            Production and Directing, linking crew members to departments and their specific roles within those
+            categories. This hierarchical structure enables logical reasoning, deeper insights, and adds meaningful
+            context to the data relations
         </p>
         <h4>5.3 Data Integration and Relationship Mapping</h4>
         <p>
-            The data processing script constructs nodes and establishes relationships between them. In the mock data
-            example, these relationships are elementary, showcasing simple links between entities. For example:
+            The script processes data to create nodes and map relationships. In the mock data example, relationships are
+            basic, showing how entities link. For example:
         </p>
+        <p>Actors connect to movies through an ACTED_IN relationship, with basic role details.</p>
         <p>
-            Actors are connected to movies via an ACTED_IN relationship, along with basic information about their roles.
+            Crew members associate with departments via the WORKS_IN relationship.
         </p>
-        <p>
-            Crew members are associated with their respective departments through the WORKS_IN relationship, providing a
-            clear depiction of their professional contributions.
-        </p>
-        <p>
-            For the movie credits dataset, the process is enhanced to manage more complex and detailed relationships.
-            This includes linking actors to movies they’ve acted in, associating crew members with their specific
-            departments, and identifying their exact roles within each movie. The result is a richly interconnected
-            graph capable of representing intricate real-world scenarios.
-        </p>
+        <p>In the movie credits dataset, this expands to handle larger, detailed relationships, linking actors to movies
+            and crew members to departments and roles.</p>
         <h4>5.4 Querying and Insights</h4>
         <p>
-            After populating the knowledge graph, queries can be performed to showcase its practical utility. In the
-            mock data example, simple queries can uncover relationships, such as “Who acted in a particular movie?” or
-            “Which department does a crew member belong to?” With the more extensive movie credits dataset, the graph
-            supports advanced queries. For instance, it can identify all actors who appeared in a given movie, crew
-            members who worked in specific departments, or even uncover collaborative patterns across multiple projects.
+            Once the graph is populated, queries demonstrate its power and utility. In the mock data example, queries
+            retrieve relationships like “Who acted in the movie?” or “Which department does a crew member belong to?”
+            The movie credits dataset enables more complex and advanced queries, such as identifying actors appearing in
+            a specific movie or uncovering connections between different crew members.
         </p>
         <p>
-            These queries highlight the power of knowledge graphs in integrating structured data and semantic knowledge.
-            In industries like entertainment, where understanding relationships between diverse entities is critical,
-            knowledge graphs offer unparalleled clarity and insight, paving the way for data-driven decision-making and
-            enhanced analysis.
+            This demonstrates how knowledge graphs allow structured data integration, semantic knowledge representation,
+            and deeper insights across various applications, where understanding complex relationships among entities is
+            critically important.
         </p>
 
 
